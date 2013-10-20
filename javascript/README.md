@@ -98,26 +98,26 @@ function () {
 
 ```javascript
 // do 
-function get() {
+function·get()·{
   // some code
 }
 
 // don't
-function get(){
+function·get(){
   // some code
 }
 
 // do
-function () {
+function·()·{
   // some code
 }
   
 // don't
-function (){
+function·(){
   // some code
 }
 ```
-  
+
 - Conditions indentation examples
 
 ```javascript
