@@ -30,11 +30,11 @@ var grumpyCat = new Cat({
 - Name variable `self` when saving reference to `this`
 
 ```javascript
-  // do
-  var self = this
+// do
+var self = this
 
-  // don't
-  var that = this
+// don't
+var that = this
 ```
 
 ## <a name='semicolons'>Semicolons</a>
