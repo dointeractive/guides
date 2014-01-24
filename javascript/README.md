@@ -171,3 +171,9 @@ kittens
 
 // don't
 var purr = function() { /* some code */ }
+```
+
+## <a name='selectors'>Selectors</a>
+
+- Prefer to use `data-` attributes as a selectors
+- Avoid use of class selectors
