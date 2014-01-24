@@ -1,6 +1,8 @@
 # Dointeractive Javascript style guide
 
 ## <a name="naming convention">Naming convention</a>
+- Use complete readable speakable names, try not to use abbreviations and shortened names
+- Single letter variables names are only allowed in cycles and primitive anonymous functions
 - Use camelCase when naming objects, function and instances
 
 ```javascript
