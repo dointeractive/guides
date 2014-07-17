@@ -140,9 +140,17 @@ if(condition){
 var items = ['one', 'two', 'three']
 
 // don't
-var items = [ 'one', 'two', 'three' ]
+var items = [·'one', 'two', 'three'·]
 ```
 
+- Don't put leading space before colon in hash declaration
+
+```javascript
+var obj = { key: value }
+
+// don't
+var obj = { key·: value }
+```
 ## <a name='blocks'>Blocks</a>
 
 - Use braces with all multi-line blocks.
