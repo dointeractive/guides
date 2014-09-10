@@ -1,6 +1,14 @@
-# Dointeractive Javascript style guide
+#Javascript style guide
 
-## <a name="naming convention">Naming convention</a>
+1. [Naming convention](#naming_convention)
+2. [Semicolons](#semicolons)
+3. [Strings](#strings)
+4. [Variables](#variables)
+5. [Whitespaces](#whitespaces)
+6. [Blocks](#blocks)
+7. [Selectors](#selectors)
+
+## <a name="naming_convention">Naming convention</a>
 - Use complete readable speakable names, try not to use abbreviations and shortened names
 - Single letter variables names are only allowed in cycles and primitive anonymous functions
 - Use camelCase when naming objects, function and instances
@@ -175,10 +183,10 @@ if (test)
 // do 
 kittens
   .map(function (i) { return i.fur === 'fluffy' })
-  .reduce(function(m, i) { return m + i })
+  .reduce(function (m, i) { return m + i })
 
 // don't
-var purr = function() { /* some code */ }
+var purr = function () { /* some code */ }
 ```
 
 ## <a name='selectors'>Selectors</a>
