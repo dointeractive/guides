@@ -47,11 +47,20 @@ var self = this
 var that = this
 ```
 
+- Prefix jQuery objects with $ sign
+```javascript
+// do
+var $body = $('body')
+
+// don't
+var body = $('body')
+```
+
 ## <a name='semicolons'>Semicolons</a>
 - Use semicolons only where it's needed. So __don't use semicolons__!
 
 ```javascript
-// do 
+// do
 for(; i < length; i++) {}
 
 // don't
@@ -104,10 +113,10 @@ function () {
 }
 ```
 
-- Functions declaration indentation examples 
+- Functions declaration indentation examples
 
 ```javascript
-// do 
+// do
 function·get()·{
   // some code
 }
@@ -121,7 +130,7 @@ function·get(){
 function·()·{
   // some code
 }
-  
+
 // don't
 function·(){
   // some code
@@ -180,7 +189,7 @@ if (test)
 - Use single line function declaration only for simple function in chaining methods
 
 ```javascript
-// do 
+// do
 kittens
   .map(function (i) { return i.fur === 'fluffy' })
   .reduce(function (m, i) { return m + i })
