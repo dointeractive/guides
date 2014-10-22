@@ -161,7 +161,6 @@
     ```
 
 ## Strings
-
 * Prefer string interpolation instead of string concatenation:
 
     ```Ruby
@@ -171,6 +170,7 @@
     # don't
     email_with_name = user.name + ' <' + user.email + '>'
     ```
+* Prefer single-quoted strings when you don't need string interpolation or special symbols such as \t, \n, ', etc.
 
 ## Spelling and grammar
 
