@@ -1,10 +1,10 @@
 # Ruby Style Guide
 
-  1.  [Whitespace](#whitespace)
-  2.  [Syntax](#syntax)
-  3.  [Naming](#naming)
-  4.  [Classes](#classes)
-  5.  [Exceptions](#exceptions)
+  1. [Whitespace](#whitespace)
+  2. [Syntax](#syntax)
+  3. [Naming](#naming)
+  4. [Classes](#classes)
+  5. [Exceptions](#exceptions)
   6. [Strings](#strings)
   7. [Spelling and grammar](#spelling-and-grammar)
   8. [Be Consistent](#be-consistent)
@@ -58,7 +58,13 @@
     ```
    
 ## Syntax
+* Prefer the Ruby 1.9 hash literal syntax where it is possible.
 
+    ```Ruby
+    # do
+    hash = { foo: 1, bar: 2 }
+    ```
+* Don't mix the Ruby 1.9 hash syntax with hash rockets in the same hash literal. When you've got keys that are not symbols stick to the hash rockets syntax.
 * Prefer `{...}` over `do...end` for single-line blocks.  Avoid using
   `{...}` for multi-line blocks (multiline chaining is always
   ugly). Always use `do...end` for "control flow" and "method
