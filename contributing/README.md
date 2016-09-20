@@ -27,6 +27,10 @@
 - [x] add foo
 ```
 
+### Avoid contributing huge changes
+
+If you rework some part of code, and see, that the sum of added/deleted lines exceeds 500 LoC – consider splitting your constribution into several pull requests. It should be possible to review and deploy your changes in several independent stages.
+
 ### Be calm
 
 A critique of your code is not tantamount to a personal attack. [Take it easy](https://www.youtube.com/watch?v=RVmG_d3HKBA#t=43). We are all working together to make a better software and not to disgrace you.
