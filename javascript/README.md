@@ -1,12 +1,14 @@
 #Javascript style guide
 
 1. [Naming convention](#naming_convention)
-2. [Semicolons](#semicolons)
-3. [Strings](#strings)
-4. [Variables](#variables)
-5. [Whitespaces](#whitespaces)
-6. [Blocks](#blocks)
-7. [Selectors](#selectors)
+2. [ES6](#ES6)
+3. [Semicolons](#semicolons)
+4. [Objects](#objects)
+5. [Strings](#strings)
+6. [Variables](#variables)
+7. [Whitespaces](#whitespaces)
+8. [Blocks](#blocks)
+9. [Selectors](#selectors)
 
 ## <a name="naming_convention">Naming convention</a>
 - Use complete readable speakable names, try not to use abbreviations and shortened names
@@ -56,6 +58,9 @@ var $body = $('body')
 var body = $('body')
 ```
 
+## <a name='es6'>ES6</a>
+- Where it's possible prefer `const` over `let`, and `let` over `var`
+
 ## <a name='semicolons'>Semicolons</a>
 - Use semicolons only where it's needed. So __don't use semicolons__!
 
@@ -68,6 +73,21 @@ var name = 'nyan cat';
 var sharpenClaws = function () {
   // some code
 };
+```
+
+## <a name='objects'>Objects</a>
+
+- Insert line breaks, after leading and before trailing curly braces, declaring long objects
+
+```javascript
+var obj = {
+  key1: 'value',
+  key2: 'value'
+}
+
+// don't
+var obj = { key1: 'value',
+            key2: 'value' }
 ```
 
 ## <a name='strings'>Strings</a>
@@ -158,6 +178,14 @@ var items = ['one', 'two', 'three']
 
 // don't
 var items = [·'one', 'two', 'three'·]
+```
+
+- In hash declaration put spaces before and after trailing and leading curly braces correspondingly
+```javascript
+var obj = {·key: value·}
+
+// don't
+var obj = {key: value}
 ```
 
 - Don't put leading space before colon in hash declaration
