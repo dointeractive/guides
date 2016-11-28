@@ -2,12 +2,13 @@
 
   1. [Whitespace](#whitespace)
   2. [Syntax](#syntax)
-  3. [Naming](#naming)
-  4. [Classes](#classes)
-  5. [Exceptions](#exceptions)
-  6. [Strings](#strings)
-  7. [Spelling and grammar](#spelling-and-grammar)
-  8. [Be Consistent](#be-consistent)
+  3. [Line breaks](#line-breaks)
+  4. [Naming](#naming)
+  5. [Classes](#classes)
+  6. [Exceptions](#exceptions)
+  7. [Strings](#strings)
+  8. [Spelling and grammar](#spelling-and-grammar)
+  9. [Be Consistent](#be-consistent)
 
 ## Whitespace
 
@@ -56,7 +57,7 @@
     some(arg).other
     [1, 2, 3].length
     ```
-   
+
 ## Syntax
 * Prefer the Ruby 1.9 hash literal syntax where it is possible.
 
@@ -109,9 +110,56 @@
     ```ruby
     # do
     names.map &:upcase
-    
+
     # don't
     names.map{ |n| n.upcase }
+    ```
+
+## Line breaks
+* Consider following examples, breaking long lines of code:
+
+    ```ruby
+    # do
+    hash = {
+      one: 1,
+      two: 2,
+      three: 3
+    }
+
+    # do
+    compute_things 'arg',
+      one: 1,
+      two: 2
+
+    # do
+    compute_things(
+      'arg_1',
+      'arg_2',
+      'arg_3'
+    )
+
+    # do
+    attr_accessor(
+      :one,
+      :two,
+      :three,
+    )
+
+    # don't
+    hash = { one: 1,   two: 2,
+             three: 3, four: 4 }
+
+    # don't
+    compute_things 'arg', one: 1,
+      two: 2
+
+    # don't
+    compute_things('arg_1', 'arg_2',
+      'arg_3')
+
+    # don't
+    attr_accessible :one, :two, :three,
+      :four, :five
     ```
 
 ## Naming
@@ -127,7 +175,7 @@
 
 ## Classes
 
-* Use `def self.method` to define singleton methods. 
+* Use `def self.method` to define singleton methods.
 
 ## Exceptions
 * Don't use exceptions for flow of control.
@@ -139,7 +187,7 @@
     else
       n / d
     end
-    
+
     # don't
     begin
       n / d
@@ -157,7 +205,7 @@
     rescue StandardError
       # exception handling
     end
-    
+
     # don't
     begin
       # an exception occurs here
@@ -172,7 +220,7 @@
     ```Ruby
     # do
     email_with_name = "#{user.name} <#{user.email}>"
-    
+
     # don't
     email_with_name = user.name + ' <' + user.email + '>'
     ```
