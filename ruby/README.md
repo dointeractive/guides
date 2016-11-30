@@ -66,7 +66,7 @@
     hash = { foo: 1, bar: 2 }
     ```
 * Don't mix the Ruby 1.9 hash syntax with hash rockets in the same hash literal. When you've got keys that are not symbols stick to the hash rockets syntax.
-* Prefer `{...}` over `do...end` for single-line blocks.  Avoid using
+* Prefer `{...}` over `do...end` for single-line blocks (code that you could write in one line without semicolon).  Avoid using
   `{...}` for multi-line blocks (multiline chaining is always
   ugly). Always use `do...end` for "control flow" and "method
   definitions".  Avoid `do...end`
