@@ -1,7 +1,7 @@
 # Rails Style Guide
 
   1. [Routes](#Routes)
-  - [Controllers](#Controllers)
+  2. [Controllers](#Controllers)
 
 ## Routes
   * Generating resourceful routes prefer `only` over `except`, `only` is easier to read, because you clearly see which routes will be generated.
