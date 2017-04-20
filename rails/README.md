@@ -1,7 +1,7 @@
 # Rails Style Guide
 
-  1. [Routes](#Routes)
-  2. [Controllers](#Controllers)
+  1. [Routes](#routes)
+  2. [Controllers](#controllers)
 
 ## Routes
   * Generating resourceful routes prefer `only` over `except`, `only` is easier to read, because you clearly see which routes will be generated.
@@ -33,7 +33,7 @@
     ```
 
 
-  * Avoid using `before_action/before_filter` for loading data. It's extremely frustrating, when instance variables are appears from nowhere and used at random places at code.
+  * Avoid using `before_action/before_filter` for loading data. It's extremely frustrating, when instance variables appears from nowhere and used at random places at code.
     ```Ruby
     # don't
     class AddressesController < ApplicationController
