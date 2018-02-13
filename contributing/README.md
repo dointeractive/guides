@@ -9,13 +9,13 @@
 - Keep your branch up-to-date by rebasing it against master (or merge, but the former is better).
 - Push your branch to the remote often to let your bros to know what you’re working on and... to not lose your work.
 
-2. If you know the number of Jira task, use it as part of the branch name. It allows Jira to auto-add these branches and pull requests with them to the
+2. If you know the number of Jira task, use it as part of the branch name. It allows Jira to auto-add these branches and pull requests with them to
 the corresponding Jira task.
 
 Let's say the task number in Jira is `ABC-123`. There are good branch name examples:
 ```
-super-feature-ABC-123
-report-fix-ABC-123
+slots-editing-ABC-123
+mobile-3ds-securitiy-patch-ABC-123
 ABC-123-hot-bugfix
 ```
 
