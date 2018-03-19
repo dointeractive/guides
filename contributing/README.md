@@ -10,13 +10,13 @@
 - Push your branch to the remote often to let your bros to know what you’re working on and... to not lose your work.
 
 2. If you know the number of Jira task, use it as part of the branch name. It allows Jira to auto-add these branches and pull requests with them to
-the corresponding Jira task.
+the corresponding Jira task. The branch name should start with the task number typed in lower case.
 
 Let's say the task number in Jira is `ABC-123`. There are good branch name examples:
 ```
-slots-editing-ABC-123
-mobile-3ds-securitiy-patch-ABC-123
-ABC-123-hot-bugfix
+abc-123-slots-editing
+abc-123-mobile-3ds-securitiy-patch
+abc-123-hot-bugfix
 ```
 
 ### Open pull requests
