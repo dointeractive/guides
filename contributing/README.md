@@ -22,6 +22,7 @@ abc-123-hot-bugfix
 ### Open pull requests
 
 1. When you think the code is done issue a pull request from your branch to master. Pull request will give your broworkers a place to review the code, and to discuss your work.
+- Add link to a Jira ticket to the pull-request comment
 - Don't forget to provide a good description to the work you've done!
 - Also you should provide instructions if special actions are needed to deploy your code (run rake task etc.).
 - Respect reviewers work, and time and try fix things fast and from the first time!
