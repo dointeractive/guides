@@ -2,6 +2,7 @@
 
   1. [Routes](#routes)
   2. [Controllers](#controllers)
+  3. [Concerns](#concerns)
 
 ## Routes
   * Generating resourceful routes prefer `only` over `except`, `only` is easier to read, because you clearly see which routes will be generated.
@@ -78,3 +79,32 @@
       end
     end
     ```
+
+## Concerns
+
+* Use properly naming for your concerns. Name should reflect what is happening.
+
+  Examples - concern for track changes on model
+
+  ```ruby
+  module ChangesTracking
+    extend ActiveSupport::Concern
+
+    attr_accessor :changes_history
+
+    included do
+      after_initialize do
+        self.changes_history ||= []
+      end
+
+      after_save do
+        self.changes_history << saved_changes
+      end
+    end
+  end
+  ```
+
+  Name like:
+  - `ChangesTracking` - normal
+  - `TrackChanges` - not normal
+  - `Trackable or Changeable` - bad
