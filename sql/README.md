@@ -98,11 +98,11 @@ __GOOD__:
 
 ```sql
 SELECT
-  orders.id AS order_id,
-  COUNT(line_items.id) AS items_count
-FROM spree_orders AS orders
-INNER JOIN spree_line_items AS line_items
-  ON line_items.order_id = orders.id
+  spree_orders.id AS order_id,
+  COUNT(spree_line_items.id) AS items_count
+FROM spree_orders
+INNER JOIN spree_line_items
+  ON spree_line_items.order_id = spree_orders.id
 ...
 ```
 
@@ -110,11 +110,11 @@ __BAD__:
 
 ```sql
 SELECT
-  orders.id AS order_id,
-  COUNT(line_items.id) AS items_count
-FROM spree_orders AS orders, spree_line_items AS line_items
+  spree_orders.id AS order_id,
+  COUNT(spree_line_items.id) AS items_count
+FROM spree_orders, spree_line_items
 WHERE
-  orders.id = line_items.order_id
+  spree_line_items.order_id = spree_orders.id
 ...
 ```
 
