@@ -130,11 +130,9 @@ SELECT
   orders.id AS order_id,
   COUNT(line_items.id) AS items_count
 FROM spree_orders AS orders
-INNER JOIN spree_line_items AS line_items
-  ON line_items.order_id = orders.id
+INNER JOIN spree_line_items AS line_items ON line_items.order_id = orders.id
 INNER JOIN ...
-LEFT JOIN users
-  ON orders.user_id = users.id
+LEFT JOIN users ON orders.user_id = users.id
 LEFT JOIN ...
 ```
 
@@ -145,24 +143,20 @@ SELECT
   orders.id AS order_id,
   COUNT(line_items.id) AS items_count
 FROM spree_orders AS orders
-JOIN spree_line_items AS line_items
-  ON line_items.order_id = orders.id
-LEFT JOIN users
-  ON orders.user_id = users.id
+JOIN spree_line_items AS line_items ON line_items.order_id = orders.id
+LEFT JOIN users ON orders.user_id = users.id
 LEFT JOIN ...
 ```
 
-Additional filters in the `INNER JOIN` go on new indented lines:
+Additional filters in the `JOIN`s go on new indented lines:
 
 ```sql
 SELECT
   orders.id AS order_id,
   COUNT(line_items.id) AS items_count
 FROM spree_orders AS orders
-JOIN spree_line_items AS line_items
-  ON line_items.order_id = orders.id
-LEFT JOIN users
-  ON orders.user_id = users.id
+INNER JOIN spree_line_items AS line_items ON line_items.order_id = orders.id
+INNER JOIN users ON orders.user_id = users.id
   AND users.b2b = 1
 ...
 ```
