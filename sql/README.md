@@ -113,7 +113,6 @@ SELECT
   orders.id AS order_id,
   COUNT(line_items.id) AS items_count
 FROM spree_orders AS orders, spree_line_items AS line_items
-INNER JOIN spree_line_items AS line_items
 WHERE
   orders.id = line_items.order_id
 ...
