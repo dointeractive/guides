@@ -12,6 +12,7 @@
 * No tabs. 2 spaces per indent.
 * No trailing whitespace.
 * Always capitalize SQL keywords (e.g., `SELECT` or `AS`)
+* Don't use 'Reserved keywords' like `order` for columns and tables aliases.
 * Variable names should be underscore separated:
 
   __GOOD__:
@@ -158,6 +159,38 @@ INNER JOIN spree_line_items AS line_items ON line_items.order_id = orders.id
 INNER JOIN users ON orders.user_id = users.id
   AND users.b2b = 1
 ...
+```
+
+The `ON` keyword and condition goes on the `JOIN` line:
+
+```sql
+SELECT
+  orders.id AS order_id,
+  COUNT(line_items.id) AS items_count
+FROM spree_orders AS orders
+INNER JOIN spree_line_items AS line_items ON line_items.order_id = orders.id
+...
+```
+
+Begin with `INNER JOIN`s and then list `LEFT JOIN`s, order them semantically, and do not intermingle `LEFT JOIN`s with `INNER JOIN`s unless necessary:
+
+__GOOD__:
+
+```sql
+INNER JOIN spree_orders AS orders ON ...
+INNER JOIN spree_users AS users ON ...
+INNER JOIN spree_line_items AS items ON ...
+LEFT JOIN spree_products AS products ON ...
+LEFT JOIN ...
+```
+
+__BAD__:
+
+```sql
+LEFT JOIN spree_products AS products ON ..
+INNER JOIN spree_orders AS orders ON ...
+LEFT JOIN ...
+INNER JOIN spree_taxons AS taxons ON ...
 ```
 
 ## `WHERE`
