@@ -10,6 +10,7 @@ This document contains practices and rules which were made by the out team.
 - For robust parsing XML prefer to use `#at_css` instead of `#xpath`.
 - When change views do not forget to [clear](https://github.com/dointeractive/instamart/blob/master/lib/tasks/cache.rake) cache if it needed.
 - Add rate limits to [rack_attack.rb](https://github.com/dointeractive/instamart/blob/master/config/initializers/rack_attack.rb) for critical resources (e.g. to prevent sms spamming out clients).
+- Do not use '-able' suffix for concerns.
 
 ## Javascript
 - When change server side rendering react components do not forget to [clear](https://github.com/dointeractive/instamart/blob/master/lib/tasks/cache.rake) cache if it needed.
